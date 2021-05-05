@@ -23,11 +23,10 @@ int main() {
         while(lookingInDir) {
             // FIXME: This also applies to the directory we are currently in, which we dont want
             if (p.is_regular_file()) {
-                std::cout << "         |----" << p.path().filename() << std::endl;
+                std::cout << std::setw(11) << "|----" << p.path().filename() << std::endl;
             }
             lookingInDir = false;
         }
-
     }
 
     std::cout << '\n';
